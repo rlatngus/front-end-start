@@ -8,7 +8,7 @@ for(var i =0; i<=100; i++){
 
 //1~100까지의 숫자중 홀수 출력
 for(var i =0; i<=100; i++){
-    if(i%2){
+    if(i%2==1){
         console.log(i);
     }
 }
