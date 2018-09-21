@@ -18,3 +18,13 @@ for(var i=0; i<todayPhoto.length; i++){
 }
 
 wrap.innerHTML = str;
+
+
+var page = 1;
+function getStartIndex(page){
+    //if(page ==1) return 0;
+    //else if(page ==2) return 3;
+    //else if(page ==3) return 6;
+    var pageCount =3;
+    return (page -1)*pageCount;   
+}
