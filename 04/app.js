@@ -17,9 +17,6 @@
 //     blocks[i].addEventListener('click',select);
 // }
 
-console.log('chess');
-
-
 var wrap = document.querySelector('.wrap');
 var str = '';
 var className = '';
@@ -27,9 +24,9 @@ var isWhite = false;
 
 
 // 마크업을 코드로 찍어주기
-for(var i=0; i < 4; i++){
+for(let i=1; i <= 4; i++){
 
-  for(var j=0; j < 4; j++){
+  for(let j=1; j <= 4; j++){
 
     if(isWhite) {
       className = 'white';
