@@ -2,19 +2,21 @@
 
     var url = 'http://1boon.kakao.com/ch/enter.json?page=1&pagesize=10';
     
-getUrlDate(url,function(json) {
-    console.log(json);
-
-    var str ='';
-
-    for(var i =0; i< json.data.length; i++){ 
-        var title = json.data[i].title;
-        var path =json.data[i].path;
-        str += '<a href= "https://1boon.kakao.com/'+path+'" target="_blank">' + title + '</a><br>';
+getUrlDate(url,print);
+function print(json) {
+        console.log(json);
+    
+        var str ='';
+    
+        for(var i =0; i< json.data.length; i++){ 
+            var title = json.data[i].title;
+            var path =json.data[i].path;
+            //str += '<a href= "https://1boon.kakao.com/'+path+'" target="_blank">' + title + '</a><br>';
+            str += `<a href= "https://1boon.kakao.com/${path}" target="_blank">'${title}</a><br>`;
+        }
+    
+        document.getElementById('wrap').innerHTML = str;
     }
-
-    document.getElementById('wrap').innerHTML = str;
-})
 
     function getUrlDate(url,callback) {
         fetch(url)
